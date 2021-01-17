@@ -1,13 +1,13 @@
 package com.choupangxia
 
-import com.choupangxia.entity.Person
+import com.choupangxia.entity.PersonFact
 rule "hello Drools"
 
 dialect "JAVA"
 
 when
 //    eval(true)
-Person();
+PersonFact();
 
 then
     System.out.println(111);

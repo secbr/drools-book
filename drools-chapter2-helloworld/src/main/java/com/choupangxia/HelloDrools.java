@@ -1,6 +1,6 @@
 package com.choupangxia;
 
-import com.choupangxia.entity.Person;
+import com.choupangxia.entity.PersonFact;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
@@ -16,7 +16,7 @@ public class HelloDrools {
 		KieServices kieServices = KieServices.Factory.get();
 		KieContainer kieContainer = kieServices.getKieClasspathContainer();
 		KieSession kieSession = kieContainer.newKieSession();
-		Person p = new Person();
+		PersonFact p = new PersonFact();
 		kieSession.insert(p);
 		int count = kieSession.fireAllRules();
 		System.out.println("触发了" + count + "规则。");
