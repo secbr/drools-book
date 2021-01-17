@@ -1,0 +1,14 @@
+package com.choupangxia
+
+import com.choupangxia.entity.Person
+rule "hello Drools"
+
+dialect "JAVA"
+
+when
+//    eval(true)
+Person();
+
+then
+    System.out.println(111);
+end
