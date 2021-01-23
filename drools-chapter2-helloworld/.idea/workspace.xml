@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="790cd146-59a1-4a62-ac01-0c4caac68c70" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/choupangxia/entity/PersonFact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/choupangxia/HelloDrools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/choupangxia/HelloDrools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/choupangxia/entity/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rules/Hello.drl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rules/Hello.drl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="790cd146-59a1-4a62-ac01-0c4caac68c70" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +118,9 @@
       <updated>1610885547378</updated>
       <workItem from="1610885548759" duration="1297000" />
       <workItem from="1610886857158" duration="4705000" />
-      <workItem from="1610922692089" duration="1599000" />
+      <workItem from="1610922692089" duration="2190000" />
+      <workItem from="1611386781391" duration="15000" />
+      <workItem from="1611388481118" duration="88000" />
     </task>
     <servers />
   </component>
@@ -162,5 +156,13 @@
       <screen x="0" y="23" width="1680" height="969" />
     </state>
     <state x="328" y="90" key="SettingsEditor/-135.-1057.1920.1057/0.23.1680.969@0.23.1680.969" timestamp="1610890068229" />
+    <state x="596" y="232" key="VCS.ChangeListViewerDialog" timestamp="1611388527384">
+      <screen x="0" y="23" width="1680" height="969" />
+    </state>
+    <state x="596" y="232" key="VCS.ChangeListViewerDialog/-135.-1057.1920.1057/0.23.1680.969@0.23.1680.969" timestamp="1611388527384" />
+    <state x="627" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611388514926">
+      <screen x="0" y="23" width="1680" height="969" />
+    </state>
+    <state x="627" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-135.-1057.1920.1057/0.23.1680.969@0.23.1680.969" timestamp="1611388514926" />
   </component>
 </project>
