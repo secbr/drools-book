@@ -1,6 +1,6 @@
 package com.choupangxia;
 
-import com.choupangxia.entity.PersonFact;
+import com.choupangxia.entity.Person;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
@@ -17,7 +17,7 @@ public class HelloDrools {
         KieServices kieServices = KieServices.Factory.get();
         KieContainer kieContainer = kieServices.getKieClasspathContainer();
         KieSession kieSession = kieContainer.newKieSession();
-        PersonFact p = new PersonFact();
+        Person p = new Person();
         p.setAge(17);
         kieSession.insert(p);
         int count = kieSession.fireAllRules();

@@ -5,7 +5,7 @@ package com.choupangxia.entity;
  * @version 1.0
  * @date 2021/1/18
  **/
-public class PersonFact {
+public class Person {
 
 	/**
 	 * 年龄
@@ -21,7 +21,6 @@ public class PersonFact {
 	 * 结果描述
 	 */
 	private String desc;
-	// 省略getter/setter
 
 	public int getAge() {
 		return age;
