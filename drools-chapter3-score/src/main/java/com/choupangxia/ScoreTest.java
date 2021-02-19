@@ -16,7 +16,7 @@ public class ScoreTest {
         // 生产中只需将代码部分进行包装，BRMS系统更多的是将代码部分与规则文件部分进行剥离和封装。
         KieServices kieServices = KieServices.Factory.get();
         KieContainer kieContainer = kieServices.getKieClasspathContainer();
-        KieSession kieSession = kieContainer.newKieSession();
+        KieSession kieSession = kieContainer.newKieSession("score-rule");
         Person p = new Person();
         p.setAge(17);
         kieSession.insert(p);
