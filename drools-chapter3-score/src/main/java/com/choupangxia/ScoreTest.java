@@ -10,7 +10,7 @@ import org.kie.api.runtime.KieSession;
  * @version 1.0
  * @date 2021/1/17
  **/
-public class HelloDrools {
+public class ScoreTest {
 
     public static void main(String[] args) {
         // 生产中只需将代码部分进行包装，BRMS系统更多的是将代码部分与规则文件部分进行剥离和封装。
