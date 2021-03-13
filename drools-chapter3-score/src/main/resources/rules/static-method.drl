@@ -1,0 +1,12 @@
+package com.choupangxia.method;
+
+import com.choupangxia.entity.Person;
+import static com.choupangxia.utils.StringUtils.isEmpty;
+
+// 规则：测试引入静态方法
+rule "import-static-method"
+when
+    $p : Person(isEmpty(desc));
+then
+    System.out.println("未处理结果");
+end

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <kmodule xmlns="http://www.drools.org/xsd/kmodule">
     <kbase name="rules" packages="com.choupangxia">
-        <ksession name="score-rule" default="true"/>
+        <ksession name="score-rule"/>
+    </kbase>
+    <kbase name="static-method" packages="com.choupangxia.method">
+        <ksession name="static-method"/>
     </kbase>
 </kmodule>
