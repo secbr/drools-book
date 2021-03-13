@@ -6,9 +6,9 @@ import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
 /**
+ * Drools基础功能演示
  * @author sec
  * @version 1.0
- * @date 2021/1/17
  **/
 public class ScoreTest {
 

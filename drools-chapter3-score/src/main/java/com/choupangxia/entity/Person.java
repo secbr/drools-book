@@ -3,7 +3,6 @@ package com.choupangxia.entity;
 /**
  * @author sec
  * @version 1.0
- * @date 2021/1/18
  **/
 public class Person {
 
