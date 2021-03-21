@@ -18,14 +18,9 @@ public class User extends DroolsResult{
 	private int fixedAssets;
 
 	/**
-	 * 借贷金额上限，单位：万
+	 * 信用额度上限，单位：万
 	 */
 	private int maxAmount;
-
-	/**
-	 * 评定等级，0，1，2；
-	 */
-	private int level;
 
 	public String getPhone() {
 		return phone;
@@ -50,15 +45,5 @@ public class User extends DroolsResult{
 	public void setMaxAmount(int maxAmount) {
 		this.maxAmount = maxAmount;
 	}
-
-	public int getLevel() {
-		return level;
-	}
-
-	public void setLevel(int level) {
-		this.level = level;
-	}
-
-	// 省略getter/setter方法
 
 }

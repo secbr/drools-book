@@ -17,7 +17,6 @@ public class DroolsResult {
 	 */
 	private String desc;
 
-
 	public String getDesc() {
 		return desc;
 	}

@@ -8,7 +8,7 @@ import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
 /**
- * FactHandler使用演示
+ * 信用评级实例演示
  *
  * @author sec
  * @version 1.0
@@ -28,7 +28,6 @@ public class CalculateAmountTest {
 		// 消息通知服务
 		MessageService messageService = new MessageService();
 		kieSession.setGlobal("messageService", messageService);
-
 
 		// 代码块③：封装Fact对象并插入
 		User user = new User();
