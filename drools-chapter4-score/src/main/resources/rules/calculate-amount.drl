@@ -1,0 +1,58 @@
+package com.choupangxia.calculate;
+
+import com.choupangxia.entity.User;
+import static com.choupangxia.utils.StringUtils.isEmpty;
+global com.choupangxia.service.BlackListService blackListService;
+global com.choupangxia.service.MessageService messageService;
+
+
+// 优先级最高，直接拒绝交易
+rule "check-the-phone-is-in-blacklist"
+agenda-group "calculate-max-amount-group"
+// 设置优先级
+salience 100
+no-loop true
+when
+    $p : User(isEmpty(phone) || blackListService.isInBlacklist(phone));
+then
+    $p.setCode("REFUSED");
+    $p.setDesc("信息不全或触发黑名单");
+    System.out.println("【规则check-the-phone-is-in-blacklist】：信息不全或触发黑名单");
+    messageService.notify("手机号为【" + $p.getPhone() +"】的用户存在于黑名单中，请对账户进行核查锁定");
+    update($p);
+end
+
+// 计算上限金额
+rule "calculate-max-amount"
+agenda-group "calculate-max-amount-group"
+salience 99
+when
+    $p : User(code == "ACCESSED");
+then
+    $p.setMaxAmount(calculateAmount($p.getFixedAssets()));
+    System.out.println("【规则calculate-max-amount】：进行分值评定");
+end
+
+// 定义函数，根据资产计算信用额度
+function int calculateAmount(int fixedAssets){
+    // 此处仅为展示function功能，在实践中可考虑通过第三章中的示例进行实现
+    if(fixedAssets <=0){
+        return 0;
+    }else if(fixedAssets < 100){
+        return 10;
+    } else {
+        return 20;
+    }
+}
+
+// agenda-group对照组
+rule "other-rule"
+agenda-group "other-group"
+salience 101
+when
+    eval(true);
+then
+    System.out.println("【规则other-rule】：其他规则被触发");
+end
+
+

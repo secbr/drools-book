@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.choupangxia</groupId>
-    <artifactId>drools-chapter3-score</artifactId>
+    <artifactId>drools-chapter4-score</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -35,5 +35,4 @@
             <version>${drools.version}</version>
         </dependency>
     </dependencies>
-
 </project>
