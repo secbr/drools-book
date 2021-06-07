@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <kbase name="kbase4Session" packages="com.choupangxia.session">
+        <ksession name="test-stateless-session" type="stateless"/>
+    </kbase>
+</kmodule>
