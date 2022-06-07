@@ -1,0 +1,9 @@
+rule "hello-kie-server"
+
+when
+    $name: String()
+then
+    System.out.println("Hello " + $name);
+end
+
+
