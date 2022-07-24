@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.secbro2</groupId>
-    <artifactId>kie-server-client-api</artifactId>
+    <artifactId>drools-chapter7-client-api</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <name>kie-server-client-api</name>
+    <name>drools-chapter7-client-api</name>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
