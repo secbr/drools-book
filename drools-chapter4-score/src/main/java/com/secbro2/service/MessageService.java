@@ -1,4 +1,4 @@
-package com.choupangxia.service;
+package com.secbro2.service;
 
 /**
  * 消息通知接口

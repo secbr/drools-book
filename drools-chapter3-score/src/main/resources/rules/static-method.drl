@@ -1,7 +1,7 @@
-package com.choupangxia.method;
+package com.secbro2.method;
 
-import com.choupangxia.entity.Person;
-import static com.choupangxia.utils.StringUtils.isEmpty;
+import com.secbro2.entity.Person;
+import static com.secbro2.utils.StringUtils.isEmpty;
 
 // 规则：测试引入静态方法
 rule "import-static-method"

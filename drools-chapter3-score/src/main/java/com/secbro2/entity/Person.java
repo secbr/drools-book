@@ -1,4 +1,4 @@
-package com.choupangxia.entity;
+package com.secbro2.entity;
 
 /**
  * @author sec

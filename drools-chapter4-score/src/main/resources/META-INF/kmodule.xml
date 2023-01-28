@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <kmodule xmlns="http://www.drools.org/xsd/kmodule">
-    <kbase name="calculate-amount" packages="com.choupangxia.calculate">
+    <kbase name="calculate-amount" packages="com.secbro2.calculate">
         <ksession name="calculate-amount"/>
     </kbase>
 </kmodule>

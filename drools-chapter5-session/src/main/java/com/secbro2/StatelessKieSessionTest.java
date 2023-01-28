@@ -1,19 +1,16 @@
-package com.choupangxia;
+package com.secbro2;
 
-import com.choupangxia.entity.Order;
+import com.secbro2.entity.Order;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.StatelessKieSession;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author sec
  * @version 1.0
  * @date 2021/6/8
  **/
-public class StatelessKieSessionTest1 {
+public class StatelessKieSessionTest {
 
 	public static void main(String[] args) {
 		KieServices kieServices = KieServices.Factory.get();
@@ -25,11 +22,8 @@ public class StatelessKieSessionTest1 {
 		Order order = new Order();
 		order.setAmount(99.99);
 		order.setOrderNo("N001");
-
-		List<Order> orderList = new ArrayList<>();
-		orderList.add(order);
 		// 执行规则
-		session.execute(orderList);
+		session.execute(order);
 
 	}
 }

@@ -1,6 +1,6 @@
-package com.choupangxia;
+package com.secbro2;
 
-import com.choupangxia.entity.Person;
+import com.secbro2.entity.Person;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;

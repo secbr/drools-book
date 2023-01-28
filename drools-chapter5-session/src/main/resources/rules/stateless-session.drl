@@ -1,5 +1,5 @@
-package com.choupangxia.session;
-import com.choupangxia.entity.Order;
+package com.secbro2.session;
+import com.secbro2.entity.Order;
 
 rule "stateless-session"
 

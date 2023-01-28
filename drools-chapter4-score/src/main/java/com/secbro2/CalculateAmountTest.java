@@ -1,8 +1,8 @@
-package com.choupangxia;
+package com.secbro2;
 
-import com.choupangxia.entity.User;
-import com.choupangxia.service.BlackListService;
-import com.choupangxia.service.MessageService;
+import com.secbro2.entity.User;
+import com.secbro2.service.BlackListService;
+import com.secbro2.service.MessageService;
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;

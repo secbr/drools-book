@@ -1,9 +1,9 @@
-package com.choupangxia.calculate;
+package com.secbro2.calculate;
 
-import com.choupangxia.entity.User;
-import static com.choupangxia.utils.StringUtils.isEmpty;
-global com.choupangxia.service.BlackListService blackListService;
-global com.choupangxia.service.MessageService messageService;
+import com.secbro2.entity.User;
+import static com.secbro2.utils.StringUtils.isEmpty;
+global com.secbro2.service.BlackListService blackListService;
+global com.secbro2.service.MessageService messageService;
 
 
 // 优先级最高，直接拒绝交易
