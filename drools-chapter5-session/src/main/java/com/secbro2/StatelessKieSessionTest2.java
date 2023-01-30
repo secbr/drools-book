@@ -19,7 +19,7 @@ import java.util.List;
 public class StatelessKieSessionTest2 {
 
 	public static void main(String[] args) {
-		KieServices kieServices = KieServices.Factory.get();
+		KieServices kieServices = KieServices.get();
 		KieContainer kieContainer = kieServices.getKieClasspathContainer();
 		// 通过KieContainer创建无状态会话
 		StatelessKieSession session = kieContainer.newStatelessKieSession("test-stateless-session");

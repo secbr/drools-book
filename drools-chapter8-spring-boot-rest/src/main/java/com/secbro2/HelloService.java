@@ -67,7 +67,7 @@ public class HelloService {
 
 	private List<Command<?>> buildCommands(Person incomeObj) {
 		List<Command<?>> cmds = new ArrayList<>();
-		KieCommands commands = KieServices.Factory.get().getCommands();
+		KieCommands commands = KieServices.get().getCommands();
 		cmds.add(commands.newInsert(incomeObj, outIdentifier));
 		cmds.add(commands.newFireAllRules());
 		return cmds;

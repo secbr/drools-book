@@ -46,7 +46,7 @@ public class KieServerCommandTest {
 
 	public static void executeCommand() {
 		// 封装待执行的命令
-		KieCommands commandsFactory = KieServices.Factory.get().getCommands();
+		KieCommands commandsFactory = KieServices.get().getCommands();
 		// insert命令
 		Command<?> insert = commandsFactory.newInsert("Drools");
 		// 触发规则命令

@@ -15,7 +15,7 @@ import org.kie.api.runtime.rule.FactHandle;
 public class ScoreFactHandlerTest {
 
 	public static void main(String[] args) {
-		KieServices kieServices = KieServices.Factory.get();
+		KieServices kieServices = KieServices.get();
 		KieContainer kieContainer = kieServices.getKieClasspathContainer();
 		KieSession kieSession = kieContainer.newKieSession("score-rule");
 
