@@ -1,0 +1,56 @@
+package com.secbro2;
+
+import com.secbro2.entity.GoodsOrder;
+import com.secbro2.utils.DroolsAction;
+
+// 规则1：金额小于100元（Order#amount单位为分）
+rule "amount-less-than-100"
+lock-on-active true
+when
+    $order : GoodsOrder(amount > 0, amount < 1000);
+then
+    DroolsAction.info("orderNo=" + $order.getOrderNo(), drools.getRule());
+    // 无优惠折扣
+    $order.setAmount($order.getAmount());
+    $order.setCode("SUCCESS");
+    $order.setMsg("无优惠折扣");
+end
+
+// 规则2：金额在100元-1000元之间
+rule "amount-between-100-and-1000"
+lock-on-active true
+when
+    $order : GoodsOrder(amount >= 1000, amount < 10000);
+then
+    DroolsAction.info("orderNo=" + $order.getOrderNo(), drools.getRule());
+    // 优惠50元
+    $order.setAmount($order.getAmount() - 500);
+    $order.setCode("SUCCESS");
+    $order.setMsg("优惠50元");
+end
+
+// 规则3：1000元以上
+rule "amount-greater-than-1000"
+lock-on-active true
+when
+    $order : GoodsOrder(amount >= 10000);
+then
+    DroolsAction.info("orderNo=" + $order.getOrderNo(), drools.getRule());
+    // 优惠200元
+    $order.setAmount($order.getAmount() - 2000);
+    $order.setCode("SUCCESS");
+    $order.setMsg("优惠200元");
+end
+
+// 规则4：金额小于等于0元（模拟失败情况）
+rule "amount-less-than-0"
+lock-on-active true
+when
+    $order : GoodsOrder(amount <= 0);
+then
+    DroolsAction.error("orderNo=" + $order.getOrderNo(), drools.getRule());
+    // 模拟异常逻辑处理
+    $order.setCode("ERROR");
+    $order.setMsg("业务处理异常");
+end
+

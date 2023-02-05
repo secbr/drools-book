@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <kbase name="discount-kbase" packages="com.secbro2" default="true">
+        <ksession name="discount-rule" default="true"/>
+    </kbase>
+</kmodule>
