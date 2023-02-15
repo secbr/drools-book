@@ -18,16 +18,19 @@ public class ScoreFactHandlerTest {
 		KieServices kieServices = KieServices.get();
 		KieContainer kieContainer = kieServices.getKieClasspathContainer();
 		KieSession kieSession = kieContainer.newKieSession("score-rule");
+		try {
+			Person p = new Person();
+			p.setAge(17);
 
-		Person p = new Person();
-		p.setAge(17);
-
-		FactHandle factHandle = kieSession.insert(p);
-		int count = kieSession.fireAllRules();
-		System.out.println("触发了" + count + "条规则。");
-		// 删除工作内存中的Fact对象
-		kieSession.delete(factHandle);
-		count = kieSession.fireAllRules();
-		System.out.println("触发了" + count + "条规则。");
+			FactHandle factHandle = kieSession.insert(p);
+			int count = kieSession.fireAllRules();
+			System.out.println("触发了" + count + "条规则。");
+			// 删除工作内存中的Fact对象
+			kieSession.delete(factHandle);
+			count = kieSession.fireAllRules();
+			System.out.println("触发了" + count + "条规则。");
+		} finally {
+			kieSession.dispose();
+		}
 	}
 }

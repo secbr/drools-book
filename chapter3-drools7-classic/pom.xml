@@ -5,36 +5,22 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.secbro2</groupId>
-    <artifactId>drools-chapter5-session</artifactId>
+    <artifactId>chapter3-drools7-classic</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <description>drools 7.45.0之后引入drools-engine和drools-engine-classic</description>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <drools.version>7.70.0.Final</drools.version>
     </properties>
-
     <dependencies>
         <dependency>
-            <groupId>org.kie</groupId>
-            <artifactId>kie-api</artifactId>
-            <version>${drools.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.drools</groupId>
-            <artifactId>drools-core</artifactId>
-            <version>${drools.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.drools</groupId>
-            <artifactId>drools-mvel</artifactId>
-            <version>${drools.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.drools</groupId>
-            <artifactId>drools-compiler</artifactId>
+            <artifactId>drools-engine-classic</artifactId>
             <version>${drools.version}</version>
         </dependency>
     </dependencies>
-
 </project>

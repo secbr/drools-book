@@ -18,7 +18,9 @@
     <name>drools-chapter8-spring-boot-rest</name>
 
     <properties>
-        <java.version>8</java.version>
+        <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <kie.version>7.70.0.Final</kie.version>
     </properties>
 

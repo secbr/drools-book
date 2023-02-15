@@ -1,0 +1,43 @@
+package com.secbro2;
+
+import com.secbro2.entity.Person;
+
+// 规则1：小于18岁
+rule "less-than-18-years-old"
+when
+    $p : Person(age < 18);
+then
+    $p.setScore(0);
+    $p.setDesc("年龄不符合条件");
+end
+
+// 规则2：18到30岁
+rule "between-18-and-30-years-old"
+when
+    $p : Person(age >= 18,age < 30);
+then
+    $p.setScore($p.getScore() + 60);
+end
+
+// 规则3：30到65岁
+rule "between-30-and-65-years-old"
+when
+    $p : Person(age >= 30,age < 65);
+then
+    $p.setScore($p.getScore() + 80);
+end
+
+// 规则4：65岁以上
+rule "greater-than-65-years-old"
+when
+    $p : Person(age >= 65);
+then
+    $p.setScore($p.getScore() + 40);
+end
+
+// 如果对于年龄的区间评分有其他的变动（比如，变得更复杂或加入PersonFact中的其他维度），只需修改此处的规则脚本，
+// 然后重新加载规则脚本即可。这里只是示例，配合BRMS系统，最终能够做到不用重新发布业务系统，
+
+query "between-18-and-65-years-old"
+ $p : Person(age >= 18,age < 65);
+end

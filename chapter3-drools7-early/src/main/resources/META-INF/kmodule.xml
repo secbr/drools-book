@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <kbase name="rules" packages="com.secbro2">
+        <ksession name="score-rule"/>
+    </kbase>
+    <kbase name="static-method" packages="com.secbro2.method">
+        <ksession name="static-method"/>
+    </kbase>
+</kmodule>

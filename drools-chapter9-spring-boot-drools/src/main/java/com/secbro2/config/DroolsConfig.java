@@ -40,12 +40,12 @@ public class DroolsConfig {
 		// 创建一个KieModule并添加到KieRepository中
 		kieRepository.addKieModule(kieRepository::getDefaultReleaseId);
 		KieBuilder kieBuilder = KIE_SERVICES.newKieBuilder(kieFileSystem());
-		kieBuilder.buildAll();
 		// 如果构建有错误信息，则抛出异常。异常逻辑可根据具体业务逻辑定制化处理。
 		Results results = kieBuilder.getResults();
 		if (results.hasMessages(Message.Level.ERROR)) {
 			throw new RuntimeException(results.getMessages().toString());
 		}
+		kieBuilder.buildAll();
 		return KIE_SERVICES.newKieContainer(kieRepository.getDefaultReleaseId());
 	}
 
