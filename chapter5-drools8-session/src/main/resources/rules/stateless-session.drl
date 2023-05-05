@@ -1,5 +1,5 @@
 package com.secbro2.session;
-import com.secbro2.entity.GoodsOrder;
+import com.secbro2.entity.Order;
 
 rule "stateless-session"
 
