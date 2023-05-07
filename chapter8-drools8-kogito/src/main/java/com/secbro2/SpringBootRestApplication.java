@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author sec
  * @version 1.0
  **/
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"org.kie.kogito.**", "com.secbro2"})
 public class SpringBootRestApplication {
 
 	public static void main(String[] args) {

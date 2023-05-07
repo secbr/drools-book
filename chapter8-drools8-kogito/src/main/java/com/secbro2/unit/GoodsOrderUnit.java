@@ -5,14 +5,14 @@ import org.drools.ruleunits.api.DataSource;
 import org.drools.ruleunits.api.DataStore;
 import org.drools.ruleunits.api.RuleUnitData;
 
-import java.io.Serializable;
-
 /**
  * @author sec
  * @version 1.0
  * @date 2023/5/6
  **/
-public class GoodsOrderUnit implements RuleUnitData, Serializable {
+public class GoodsOrderUnit implements RuleUnitData {
+
+	private long maxAmount;
 
 	private DataStore<GoodsOrder> goodsOrders;
 
@@ -33,4 +33,11 @@ public class GoodsOrderUnit implements RuleUnitData, Serializable {
 	}
 
 
+	public long getMaxAmount() {
+		return maxAmount;
+	}
+
+	public void setMaxAmount(long maxAmount) {
+		this.maxAmount = maxAmount;
+	}
 }
