@@ -57,8 +57,4 @@ query QuerySuccessResult
     $order: /goodsOrders[code == "SUCCESS"]
 end
 
-query QueryErrorResult
-    $order: /goodsOrders[code == "ERROR"]
-end
-
 

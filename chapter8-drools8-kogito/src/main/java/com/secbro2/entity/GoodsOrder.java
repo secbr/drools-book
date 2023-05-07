@@ -7,17 +7,6 @@ package com.secbro2.entity;
  **/
 public class GoodsOrder {
 
-	public GoodsOrder(){
-
-	}
-
-	public GoodsOrder(String orderNo, long amount, String code, String msg){
-		this.orderNo = orderNo;
-		this.amount = amount;
-		this.code = code;
-		this.msg = msg;
-	}
-
 	/**
 	 * 订单编号
 	 */

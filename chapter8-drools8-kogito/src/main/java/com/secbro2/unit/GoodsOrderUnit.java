@@ -12,8 +12,6 @@ import org.drools.ruleunits.api.RuleUnitData;
  **/
 public class GoodsOrderUnit implements RuleUnitData {
 
-	private long maxAmount;
-
 	private DataStore<GoodsOrder> goodsOrders;
 
 	public GoodsOrderUnit() {
@@ -32,12 +30,4 @@ public class GoodsOrderUnit implements RuleUnitData {
 		this.goodsOrders = goodsOrders;
 	}
 
-
-	public long getMaxAmount() {
-		return maxAmount;
-	}
-
-	public void setMaxAmount(long maxAmount) {
-		this.maxAmount = maxAmount;
-	}
 }
