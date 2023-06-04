@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_EF742D4B-DEED-4406-A728-F82558A6FF7A" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_9161296A-0CED-4097-A56B-A92FB8706FC6" name="BookDiscountStrategy" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_EF742D4B-DEED-4406-A728-F82558A6FF7A">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_9A704B54-9B05-4EDE-855C-A8207CC69CAF" name="BookCategory" isCollection="false">
+    <dmn:typeRef>string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_78A0A6E8-D6A5-4FBA-8A9E-4C82229678BC" name="PublishYear" isCollection="false">
+    <dmn:typeRef>number</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_EB81C2AA-0525-4F00-ACF6-8A117FE8BECD" name="OriginalPrice" isCollection="false">
+    <dmn:typeRef>number</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:inputData id="_CC6875D4-D62A-4F48-A73A-B4DCC3719E9A" name="BookCategory">
+    <dmn:extensionElements/>
+    <dmn:variable id="_EF749A2C-94E4-49BB-A84A-69B51326EC17" name="BookCategory" typeRef="BookCategory"/>
+  </dmn:inputData>
+  <dmn:inputData id="_EBA67AA9-B97A-4C7B-89F5-0CC971F40215" name="PublishYear">
+    <dmn:extensionElements/>
+    <dmn:variable id="_A0BA1DE9-7D5A-441B-935B-775E481FD918" name="PublishYear" typeRef="PublishYear"/>
+  </dmn:inputData>
+  <dmn:inputData id="_244D5E48-E560-4D90-A430-55AC1B9B4513" name="OriginalPrice">
+    <dmn:extensionElements/>
+    <dmn:variable id="_5F666F2F-2F86-450B-8153-6F584B9091E1" name="OriginalPrice" typeRef="OriginalPrice"/>
+  </dmn:inputData>
+  <dmn:decision id="_DFE8A2F2-854F-45DF-8006-B60C1088CF17" name="DiscountCoefficient">
+    <dmn:extensionElements/>
+    <dmn:variable id="_7F5D31E2-7D71-4CC0-887F-6BE145BF920C" name="DiscountCoefficient" typeRef="number"/>
+    <dmn:informationRequirement id="_2ACE32D9-5D1B-4878-82A9-CB9009057B55">
+      <dmn:requiredInput href="#_EBA67AA9-B97A-4C7B-89F5-0CC971F40215"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_3D9A1AE1-5C05-4305-9647-DB5803467FB0">
+      <dmn:requiredInput href="#_244D5E48-E560-4D90-A430-55AC1B9B4513"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_0B214A46-90CB-45F2-9962-EF6CD799C08F">
+      <dmn:requiredInput href="#_CC6875D4-D62A-4F48-A73A-B4DCC3719E9A"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_4E3020B6-1FD8-411A-918F-03E4BA31DCB7" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_595A9894-32C3-4C2A-B258-49ECA0F60A2F">
+        <dmn:inputExpression id="_2E2589B7-688D-4D2E-BA00-A915EA1BAD03" typeRef="BookCategory">
+          <dmn:text>BookCategory</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_82D1AC06-D4B7-46F7-8CB5-B0CD8911D69A">
+        <dmn:inputExpression id="_A36E6ADA-657D-438D-89A5-F9418ECFE470" typeRef="PublishYear">
+          <dmn:text>PublishYear</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_7A5D2801-9667-4154-AF0B-1D02E723BB56">
+        <dmn:inputExpression id="_FB7A719B-074D-4864-B66C-9913B974AC4C" typeRef="OriginalPrice">
+          <dmn:text>OriginalPrice</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_A0C20B5C-3964-4A3E-8FB4-2E606FEEED06"/>
+      <dmn:annotation name="折扣"/>
+      <dmn:rule id="_86129824-CDA7-44EA-BF5F-2272EA823908">
+        <dmn:inputEntry id="_BCB7E3C1-0905-44B1-A8F2-78A2277AF32D">
+          <dmn:text>"小说"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B1D847BB-5D2C-47B9-92D3-F603B8CEBD12">
+          <dmn:text>2021</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_240E24C1-3FAB-43A1-A67E-88404EE4F6BC">
+          <dmn:text>&lt;100</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_F1624647-1090-42D3-9D41-81A3B2AE1A2E">
+          <dmn:text>0.9</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_BB707382-9807-47EE-88A2-46656A2D16B8">
+        <dmn:inputEntry id="_81C7DBF6-F8DF-4553-8D9A-18FABB6B1519">
+          <dmn:text>"小说"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_ECD85728-1D94-465C-A54D-1FA9B425A9AA">
+          <dmn:text>2021</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DADC7EFA-709D-471F-BBD9-4472A5D343AB">
+          <dmn:text>&gt;=100</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_6E7A2F46-7FF6-4445-A762-828B481178C5">
+          <dmn:text>0.8</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_3D246618-0BBA-4131-A790-5A353578522C">
+        <dmn:inputEntry id="_652B57FB-06B6-4848-9716-8F11F30FC3CA">
+          <dmn:text>"教育"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_911DC994-D89D-4D81-B7F5-30FBC89B8696">
+          <dmn:text>2020</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9676C163-E856-4D55-AC65-FC101D4D15B7">
+          <dmn:text>&lt;150</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_87D81B3C-ABBD-4E7A-9043-EE16462DA42D">
+          <dmn:text>0.85</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_5F34A7A0-762B-4ACC-ABCC-EECA1535C8BB">
+        <dmn:inputEntry id="_F9A8D251-8636-4CC9-B3E1-6ACDA3F76661">
+          <dmn:text>"科技"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_7765DF63-2CA9-432A-90EC-826D9B13D55A">
+          <dmn:text>2019</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8EA5E830-BEEA-4CF0-B597-7596A2107202">
+          <dmn:text>&lt;200</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_536980A4-D85D-4491-9FDB-A745E0827C02">
+          <dmn:text>0.75</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="_7C5B5A01-2F5E-4A60-95BD-890C100C22D6" name="FinalPrice">
+    <dmn:extensionElements/>
+    <dmn:variable id="_EA0077D6-AAEC-4C6E-9DC4-D418A182A789" name="FinalPrice" typeRef="number"/>
+    <dmn:informationRequirement id="_4BD7EDDD-E92E-471D-B9AA-24DE49E2CB6C">
+      <dmn:requiredInput href="#_244D5E48-E560-4D90-A430-55AC1B9B4513"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_05048AD8-2981-4269-A53B-1BAF2A60444C">
+      <dmn:requiredDecision href="#_DFE8A2F2-854F-45DF-8006-B60C1088CF17"/>
+    </dmn:informationRequirement>
+    <dmn:literalExpression id="_253D90D1-0048-4FEA-8D80-1FB999E2854D">
+      <dmn:text>OriginalPrice * DiscountCoefficient</dmn:text>
+    </dmn:literalExpression>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_F2AACD2A-23C1-4C6C-ADF6-7E9C8C9CE108" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_4E3020B6-1FD8-411A-918F-03E4BA31DCB7">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_253D90D1-0048-4FEA-8D80-1FB999E2854D">
+            <kie:width>190</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_CC6875D4-D62A-4F48-A73A-B4DCC3719E9A" dmnElementRef="_CC6875D4-D62A-4F48-A73A-B4DCC3719E9A" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="398" y="452" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_EBA67AA9-B97A-4C7B-89F5-0CC971F40215" dmnElementRef="_EBA67AA9-B97A-4C7B-89F5-0CC971F40215" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="664" y="452" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_244D5E48-E560-4D90-A430-55AC1B9B4513" dmnElementRef="_244D5E48-E560-4D90-A430-55AC1B9B4513" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="912" y="452" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_DFE8A2F2-854F-45DF-8006-B60C1088CF17" dmnElementRef="_DFE8A2F2-854F-45DF-8006-B60C1088CF17" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="634.5" y="280" width="143" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_7C5B5A01-2F5E-4A60-95BD-890C100C22D6" dmnElementRef="_7C5B5A01-2F5E-4A60-95BD-890C100C22D6" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="695" y="97" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_2ACE32D9-5D1B-4878-82A9-CB9009057B55" dmnElementRef="_2ACE32D9-5D1B-4878-82A9-CB9009057B55">
+        <di:waypoint x="714" y="477"/>
+        <di:waypoint x="706" y="330"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_3D9A1AE1-5C05-4305-9647-DB5803467FB0" dmnElementRef="_3D9A1AE1-5C05-4305-9647-DB5803467FB0">
+        <di:waypoint x="962" y="477"/>
+        <di:waypoint x="706" y="330"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_0B214A46-90CB-45F2-9962-EF6CD799C08F" dmnElementRef="_0B214A46-90CB-45F2-9962-EF6CD799C08F">
+        <di:waypoint x="448" y="477"/>
+        <di:waypoint x="706" y="330"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_4BD7EDDD-E92E-471D-B9AA-24DE49E2CB6C" dmnElementRef="_4BD7EDDD-E92E-471D-B9AA-24DE49E2CB6C">
+        <di:waypoint x="962" y="477"/>
+        <di:waypoint x="745" y="147"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_05048AD8-2981-4269-A53B-1BAF2A60444C" dmnElementRef="_05048AD8-2981-4269-A53B-1BAF2A60444C">
+        <di:waypoint x="706" y="305"/>
+        <di:waypoint x="745" y="147"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
