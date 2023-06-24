@@ -12,10 +12,10 @@
     </parent>
 
     <groupId>com.secbro2</groupId>
-    <artifactId>drools-chapter8-spring-boot-rest</artifactId>
+    <artifactId>chapter14-spring-boot-rest</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <name>drools-chapter8-spring-boot-rest</name>
+    <name>chapter14-spring-boot-rest</name>
 
     <properties>
         <java.version>11</java.version>

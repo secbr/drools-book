@@ -44,6 +44,12 @@
             <artifactId>drools-mvel</artifactId>
             <version>${drools.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-embedder</artifactId>
+            <version>3.8.4</version>
+        </dependency>
+
     </dependencies>
 
     <build>

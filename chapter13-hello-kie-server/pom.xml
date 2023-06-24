@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.secbro2</groupId>
-    <artifactId>hello-kie-server</artifactId>
+    <artifactId>chapter13-hello-kie-server</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <name>hello-kie-server</name>
+    <name>chapter13-hello-kie-server</name>
 </project>
